@@ -211,6 +211,17 @@ class VideoList : RComponent<VideoListProps, VideoListState>() {
 ```warning
 **State should only ever be modified from within the** **`setState`** **lambda**. This allows the React renderer to detect any changes to the state, and to re-render portions of our UI quickly and efficiently.
 ```
+```note
+If your are not in a english country, there is a bug with google translate. You can solve it with `<span>` blocks around text:
+`if (video == state.selectedVideo) {
+    span {
+        +"▶ "
+    }
+}
+span {
+    +"${video.speaker}: ${video.title}"
+}`
+```
 
 You can find more details about state in the official [React FAQ](https://reactjs.org/docs/faq-state.html).
 
